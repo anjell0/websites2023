@@ -60,3 +60,21 @@ nav span {
     font-family: marshmallows;
     margin-top: 160px;
 }
+section {
+    width: 100%;
+    height: 500px;
+}
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about img {
+    height: 200px;
+}
+.about p {
+    font-family: bodoni;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: left;
+}
