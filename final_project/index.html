@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/foundation/5.0.2/css/foundation.css'>
+    <title>SisterIsh Co.</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="wrap">
+        <div class="navbar">
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Shop">Shop Now</a>
+                <ul>
+                    <li><a href="#Candles">Candles</a></li>
+                    <li><a href="#Wax">Wax Melts</a></li>
+                    <li><a href="#Goods">Home Goods</a></li>
+                </ul>
+            </li>
+            <li><a href="#Team">Team</a>
+                <ul>
+                    <li><a href="#Angelo">Angelo</a></li>                            
+                    <li><a href="#Emelda">Emelda</a></li>
+                    <li><a href="#Kei">Kei</a></li>                        
+                    <li><a href="#Mack">Mack</a></li>
+                    <li><a href="#Zoey">Zoey</a></li>
+                </ul>
+            </li>
+            <li><a href="#About">About</a></li>
+            <li><a href="#Contact">Contact</a></li>
+    
+        </div>
+    </div>
+
+    <section id="Home">
+        <div class="callout">
+            <h1>Welcome to SisterIsh</h1>
+            <p>Bringing at home back home</p>
+        </div>
+    </section>
+
+    <section id="Shop">
+            <p>Shop for <a href="#Candles">Candles</a>!</p>
+            <p>Shop for <a href="#Wax">Wax Melts</a>!</p>
+            <p>Shop for <a href="#Goods">Home Goods</a>!</p>
+    </section>
+    <section id="Candles">
+        <div class="row">
+            <nav class="top-bar" data-topbar>
+                <ul class="title-area">
+                    <li class="name">
+                        <h1><a href="#">Shopping Cart //</a></h1>
+                    </li>
+            </nav>
+            <div class="medium-4  columns">
+                <div class="cart">
+                    <h1>Cart items</h1>
+                    <div class="row">
+                        <div class="medium-6 columns">
+                            <button class="tiny secondary" id="clear">Clear the cart</button>
+                        </div>
+                        <div class="medium-6 columns">
+                            <button class="tiny disabled" title="Work in progress">Checkout</button>
+                        </div>
+                    </div>
+                    <div id="cartItems">Loading cart...</div>
+                    Total price: <strong id="totalPrice">0 $</strong>
+                </div>
+            </div>
+            <div class="medium-8 columns">
+                <h1>Candles</h1>
+                <div class="products">
+                    <div class="product medium-4 columns" data-name="12oz Candy Cane-ish" data-price="12" data-id="0">
+                        <img src="./images/candyCane.png" alt="12oz Candy Cane-ish" />
+                        <h3>12oz <br> Candy Cane-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="12oz Grandma's Jam-ish" data-price="12" data-id="1">
+                        <img src="./images/grandmaJam.png" alt="12oz Grandma's Jam-ish" />
+                        <h3>12oz Grandma's Jam-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="12oz Night Before Christm-ish" data-price="12" data-id="2">
+                        <img src="./images/nightBefore.png"alt="12oz Night Before Christm-ish" />
+                        <h3>12oz Night Before Christm-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="cartT">
+          <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+        <%= item.count %> piece<% if(item.count > 1)
+        {%>s
+        <%}%> for <%= item.total %>$</span > </div>
+        <% }); %>
+        </script>
+    </section>
+    <section id="Wax">
+            <div class="medium-8 columns">
+                <h1>Wax Melts</h1>
+                <div class="products">
+                    <div class="product medium-4 columns" data-name="Candy Cane-ish Melt" data-price="8" data-id="3">
+                        <img src="./images/candyCane.png" alt="Candy Cane-ish Melt" />
+                        <h3>Candy Cane-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="Grandma's Jam-ish Melt" data-price="8" data-id="4">
+                        <img src="./images/grandmaJam.png" alt="Grandma's Jam-ish Melt" />
+                        <h3>Grandma's Jam-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="Night Before Christm-ish Melt" data-price="8" data-id="5">
+                        <img src="./images/nightBefore.png"alt="Night Before Christm-ish Melt" />
+                        <h3>Night Before Christm-<i>ish</i></h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="cartT">
+          <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+        <%= item.count %> piece<% if(item.count > 1)
+        {%>s
+        <%}%> for <%= item.total %>$</span > </div>
+        <% }); %>
+        </script>
+    </section>
+    <section id="Goods">
+            <div class="medium-8 columns">
+                <h1>Home Goods</h1>
+                <div class="products">
+                    <div class="product medium-4 columns" data-name="Elephant Wax Warmer" data-price="20" data-id="6">
+                        <img src="./images/elephantWarmer.jpeg" alt="Elephant Wax Warmer" />
+                        <h3>Elephant Wax Warmer</h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="Desk Wax Warmer" data-price="15" data-id="7">
+                        <img src="./images/warmer.jpeg" alt="Desk Wax Warmer" />
+                        <h3>Desk Wax Warmer</h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                    <div class="product medium-4 columns" data-name="Candle Wick Lighter" data-price="2" data-id="8">
+                        <img src="./images/lighter.avif"alt="Candle Wick Lighter" />
+                        <h3>Candle Wick Lighter</h3>
+                        <input type="text" class="count" value="1" />
+                        <button class="tiny">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/template" id="cartT">
+          <% _.each(items, function (item) { %> <div class = "panel"> <h3> <%= item.name %> </h3>  <span class="label">
+        <%= item.count %> piece<% if(item.count > 1)
+        {%>s
+        <%}%> for <%= item.total %>$</span > </div>
+        <% }); %>
+        </script>
+    </section>
+    <section id="ShopEnd">
+        <button><a href="#Candles"><i class="fas fa-arrow-up"></i>Return to Cart</a></button>
+    </section>
+
+    <section id="Team">
+        <h2 style="margin-top: 50px; font-family: fantasy; color: var(--dark-peach);">Team</h2>
+        <div class="member" id="Angelo">
+            <img src="" alt="">
+            <h2>Angelo Allen</h2>
+            <p>
+                Media Arts and Science: Game Design & Development. I was responsibly for coding 
+                the navbar, shop, and team sections. After receiving ideas of what to put for products/ 
+                members and where to map them, I began coding both sections out.
+            </p>
+        </div>
+        <div class="member" id="Emelda">
+            <img src="" alt="">
+            <h2>Emelda Price</h2>
+            <p>
+                Media Arts and Science: Game Design and Development, 3D Graphics, and Animation. I 
+                was responsible for CSS, overall aesthetic and user experience. I was primarily responsible 
+                for color scheme and and font choices.
+            </p>
+        </div>
+        <div class="member" id="Kei">
+            <img src="" alt="">
+            <h2>Kei White</h2>
+            <p>
+                Media Arts & Science Major: Digital Storytelling. I was responsible for CSS and aesthetic. 
+                My main responsibility was placement/location of objects and assets on the web page.
+            </p>
+        </div>
+        <div class="member" id="Mack">
+            <img src="" alt="">
+            <h2>Mack Enlow</h2>
+            <p>
+                Media Arts and Science: Digital Storytelling. I was responsible for group organization 
+                and feedback. I offered feedback on site aesthetic and made sure everything was on 
+                track for our business to be up and running in time.
+            </p>
+        </div>
+        <div class="member" id="Zoey">
+            <img src="" alt="">
+            <h2>Zoey Laughner</h2>
+            <p>
+                Media Arts and Science: Digital Storytelling. I worked with Emelda and Kei to finalize 
+                the overall design and appearance of the site, and worked alongside Angelo on programming 
+                the first draft of the site and through towards the final version.
+            </p>
+        </div>
+    </section>
+
+    <section id="About">
+        <h2>About</h2>
+        <br>
+        <p>
+            Sister<i>Ish</i> is a home goods and scents company that offers cruelty free, hand poured, soy 
+            wax candles as well as accompanying accessories. Sister<i>Ish</i> believes in living your best
+            life in a home that brings you the best comfort and we hope to offer products and experiences
+            to help make your house a home.
+        </p>
+    </section>
+
+    <section id="Contact">
+        <h2>Contact</h2>
+        <form action="">
+            <input type="text" placeholder="Name">
+            <input type="text" placeholder="E-Mail">
+            <input type="text" placeholder="Subject">
+            <textarea name="comment" cols="19" rows="7" placeholder="Comment"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <div class="footer">
+        <p>
+            Sister<i>Ish</i> Co. &copy; 2023<br>
+            <a href="mailto:sisterishco@gmail.com" style="text-shadow: 1px 0px 8px var(--peach);">sisterishco@gmail.com</a>
+        </p>
+    </div>
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+    <script  src="./app/app.js"></script>
+</body>
+</html>

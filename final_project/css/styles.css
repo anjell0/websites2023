@@ -1,0 +1,260 @@
+* {
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+}
+html, body {
+ height: 100%
+}
+h1, h2, h3, h4, h5, h6, p {
+ margin-bottom: 16px
+}
+:root {
+    --peach:#FCCEB9;
+    --white-peach:#fae7df;
+    --dark-peach:#c0775f;
+}
+#wrap {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 70px;
+    position: fixed;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 80px;
+    width: 100%;
+    padding: 0;
+    position: fixed;
+    background: var(--peach);
+}
+.navbar li{
+    justify-content: space-evenly;
+    height: auto;
+    width: 130px;
+    float: right;
+    text-align: center;
+    list-style: none;
+    font: normal bold 15px/1em Arial, Verdana, Helvetica;
+    padding: 0;
+    margin: auto;
+}
+.navbar a {
+    padding: 18px 0;
+    text-decoration: none;
+    font-family: fantasy;
+    font-size: 20px;
+    color: var(--dark-peach);
+    display: block;
+}
+.navbar li:hover, a:hover{
+    background-color: var(--peach);
+}
+.navbar li ul {
+    display: none;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+.navbar li:hover ul {
+    display: block;
+}
+.navbar li ul li {
+    background: linear-gradient(var(--white-peach), var(--peach), var(--dark-peach));
+    line-height: 40px;
+}
+.navbar li ul li a:hover {
+    background-color: var(--white-peach);
+}
+section {
+    height: 80%;
+}
+#Home {
+    height: 94%;
+    background-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,0)
+    ),
+    url(../images/peachcandle.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Home .callout {
+    color: black;
+    align-items: center;
+}
+#Home .callout h1{
+    font-size: 90px;
+    font-family: cursive;
+}
+#Home .callout p{
+    font-size: 45px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+#Shop {
+    height: 94%;
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Shop p {
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+    text-decoration: none;
+    border: 2px #000;
+}
+#Shop a {
+    color: var(--dark-peach);
+    text-decoration: none;
+}
+#Candles {
+    height: 94%;
+    background-color: var(--peach);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Candles .top-bar {
+    width: 100%;
+    background-color: var(--dark-peach);
+}
+#Candles .top-bar h1{
+    font-family: cursive;
+}
+#Candles .disabled {
+    background-color: #c0775f;
+}
+#Wax {
+    height: 40%;
+    background-color: var(--peach);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Wax div h1{
+    margin-left: 300px;
+}
+#Wax div .products{
+    margin-left: 300px;
+}
+#Goods {
+    height: 90%;
+    background-color: var(--peach);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#Goods div h1{
+    margin-left: 300px;
+}
+#Goods div .products{
+    margin-left: 300px;
+}
+#ShopEnd {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    background-color: var(--peach);
+}
+button {
+    background: var(--dark-peach);
+    padding: 7px 12px;
+    border-radius: 6px;
+}
+button a{
+    color: var(--white-peach);
+    font-size: 18px;
+}
+.cart {
+    padding: 20px;
+  }
+#Team {
+    height: 130%;
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#Team .member {
+    width: 70%;
+    margin: auto;
+}
+#Team .member h2 {
+    font-family: fantasy;
+    font-size: 28px;
+    color: var(--dark-peach);
+}
+#Team .member p {
+    font-family: 'Times New Roman', Times, serif;
+}
+#About {
+    height: 50%;
+    background-color: var(--peach);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#About h2 {
+    color: var(--dark-peach);
+    font-family: fantasy;
+    font-size: 50px;
+    margin-top: 70px;
+}
+#About p {
+    width: 50%;
+}
+#Contact {
+    height: 60%;
+    background: var(--peach);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#Contact h2 {
+    font-family: fantasy;
+    font-size: 50px;
+    color: var(--dark-peach);
+}
+#Contact form {
+    width: 40%;
+}
+#Contact form input,textarea {
+    margin: 5px;
+    background-color: var(--white-peach);
+    color: var(--dark-peach);
+}
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 50px;
+    color: black;
+    text-align: left;
+    background: var(--dark-peach);
+}
+.footer p {
+    margin-left: 5px;
+}
